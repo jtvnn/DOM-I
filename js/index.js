@@ -40,3 +40,25 @@ const siteContent = {
 // Example: Update the img src for the logo
 let logo = document.getElementById("logo-img");
 logo.setAttribute('src', siteContent["nav"]["img-src"])
+
+// #### Create selectors to point your data into elements
+
+// * [ ] Create selectors by using any of the DOM element's methods
+// * [ ] Note that IDs have been used on all images. Use the IDs to update src path content
+const nav = document.querySelectorAll('nav a')
+
+nav[0].textContent = siteContent.nav['nav-item-1']
+nav[1].textContent = siteContent.nav['nav-item-2']
+nav[2].textContent = siteContent.nav['nav-item-3']
+nav[3].textContent = siteContent.nav['nav-item-4']
+nav[4].textContent = siteContent.nav['nav-item-5']
+nav[5].textContent = siteContent.nav['nav-item-6']
+
+const imageFirst = document.querySelector('#cta-img')
+imageFirst.src = siteContent.cta['img-src']
+
+const title = document.querySelector('.cta-text h1')
+title.textContent = siteContent.cta['h1']
+
+const button = document.querySelector('.cta-text button')
+button.textContent = siteContent.cta['button']
