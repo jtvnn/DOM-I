@@ -45,6 +45,11 @@ logo.setAttribute('src', siteContent["nav"]["img-src"])
 
 // * [ ] Create selectors by using any of the DOM element's methods
 // * [ ] Note that IDs have been used on all images. Use the IDs to update src path content
+// #### Update the HTML with the JSON data
+
+// * [ ] Remember, NO direct updating of the HTML source is allowed.
+// * [ ] Using your selectors, update the content to match the example file.
+// * [ ] Remember to update the src attributes on images
 const nav = document.querySelectorAll('nav a')
 
 nav[0].textContent = siteContent.nav['nav-item-1']
@@ -62,3 +67,23 @@ title.textContent = siteContent.cta['h1']
 
 const button = document.querySelector('.cta-text button')
 button.textContent = siteContent.cta['button']
+
+// #### Add new content
+
+// * [ ] Change the color of the navigation text to be green.
+// * [ ] Utilize `.appendChild()` and `.prepend()` to add two new items to the navigation system. You can call them whatever you want.
+// * [ ] Check your work by looking at the [original html](original.html) in the browser
+const featuresTitle = document.querySelector('.top-content .text-content h4')
+featuresTitle.textContent = siteContent['main-content']['features-h4']
+
+const featuresPara = document.querySelector('.top-content .text-content p')
+featuresPara.textContent = siteContent['main-content']['features-content']
+
+const aboutTitle = document.querySelector('.top-content .text-content:nth-of-type(2) h4')
+aboutTitle.textContent = siteContent['main-content']['about-h4']
+
+const aboutPara = document.querySelector('.top-content .text-content:nth-of-type(2) p')
+aboutPara.textContent = siteContent['main-content']['about-content']
+
+secondImage = document.querySelector('.middle-img')
+secondImage.src = siteContent['main-content']['middle-img-src']
