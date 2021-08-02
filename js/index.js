@@ -85,5 +85,57 @@ aboutTitle.textContent = siteContent['main-content']['about-h4']
 const aboutPara = document.querySelector('.top-content .text-content:nth-of-type(2) p')
 aboutPara.textContent = siteContent['main-content']['about-content']
 
-secondImage = document.querySelector('.middle-img')
+const secondImage = document.querySelector('.middle-img')
 secondImage.src = siteContent['main-content']['middle-img-src']
+
+const servicesTitle = document.querySelector('.bottom-content .text-content h4')
+servicesTitle.textContent = siteContent['main-content']['services-h4']
+
+const servicesPara = document.querySelector('.bottom-content .text-content p')
+servicesPara.textContent = siteContent['main-content']['services-content']
+
+const productTitle = document.querySelector('.bottom-content .text-content:nth-of-type(2) h4')
+productTitle.textContent = siteContent['main-content']['product-h4']
+
+const productPara = document.querySelector('.bottom-content .text-content:nth-of-type(2) p')
+productPara.textContent = siteContent['main-content']['product-content']
+
+const visionTitle = document.querySelector('.bottom-content .text-content:nth-of-type(3) h4')
+visionTitle.textContent = siteContent['main-content']['vision-h4']
+
+const visionPara = document.querySelector('.bottom-content .text-content:nth-of-type(3) p')
+visionPara.textContent = siteContent['main-content']['vision-content']
+
+const contactTitle = document.querySelector('.contact h4')
+contactTitle.textContent = siteContent['contact']['contact-h4']
+
+const contactAddress = document.querySelector('.contact p')
+contactAddress.textContent = siteContent['contact']['address']
+
+const contactPhone = document.querySelector('.contact p:nth-of-type(2)')
+contactPhone.textContent = siteContent['contact']['phone']
+
+const contactEmail = document.querySelector('.contact p:nth-of-type(3)')
+contactEmail.textContent = siteContent['contact']['email']
+
+const footer = document.querySelector('footer p')
+footer.textContent = siteContent['footer']['copyright']
+
+// * [ ] Change the color of the navigation text to be green.
+const color = document.querySelectorAll('nav a')
+color.forEach(item => {
+  item.style.color = 'green'
+})
+
+// * [ ] Utilize `.appendChild()` and `.prepend()` to add two new items to the navigation system. You can call them whatever you want.
+const link = document.querySelector('nav a')
+const copyOfFirstLink = link.cloneNode(true)
+const linkContainer = document.querySelector('nav')
+linkContainer.appendChild(copyOfFirstLink)
+copyOfFirstLink.textContent = 'Blog'
+
+const link2 = document.querySelector('nav a')
+const copyOfFirstLink2 = link2.cloneNode(true)
+const linkContainer2 = document.querySelector('nav')
+linkContainer2.prepend(copyOfFirstLink2)
+copyOfFirstLink2.textContent = 'Socials'
